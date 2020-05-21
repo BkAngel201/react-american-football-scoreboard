@@ -9,6 +9,7 @@ function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
   const [homeScore, setHomeScore] = useState(32)
   const [visitorScore, setVisitorScore] = useState(32)
+  const [quarter, setQuarter] = useState(1)
 
   const handler = (team, score) => {
     if(team === 'visitor') {
@@ -25,12 +26,15 @@ function App() {
           homeScore={homeScore} 
           visitorScore={visitorScore}
         />
-        <BottomRow />
+        <BottomRow 
+          quarter={quarter}
+        />
       </section>
       <ButtonsRow 
         homeScore={homeScore} 
         visitorScore={visitorScore}
         scoreHandler={handler}
+        setQuarter={setQuarter}
       />
     </div>
   );

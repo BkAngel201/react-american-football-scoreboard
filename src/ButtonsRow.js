@@ -2,6 +2,14 @@ import React from "react";
 import "./App.css";
 
 const ButtonsRow = (props) => {
+
+  const selectChange = (e) => {
+    if(e.target.value !== 'quarter') {
+      props.setQuarter(e.target.value)
+      e.target.value = 'quarter'
+    }
+    
+  }
   return (
     <section className="buttons">
         <div className="homeButtons">
@@ -13,6 +21,16 @@ const ButtonsRow = (props) => {
         <div className="awayButtons">
           <button className="awayButtons__touchdown" onClick={() => props.scoreHandler('visitor',7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => props.scoreHandler('visitor',3)}>Away Field Goal</button>
+        </div>
+        <div className="quarterSelector">
+          Quarter
+          <select onChange={selectChange}>
+            <option value='quarter'>Select Quarter</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+          </select>
         </div>
       </section>
       );
