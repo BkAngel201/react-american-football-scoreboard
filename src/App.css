@@ -117,10 +117,12 @@
 .awayButtons {
   width: 50%;
 }
-.quarterSelector {
-  width:20%
+.quarterSelector,
+.inputField {
+  width:22%
 }
-select {
+select,
+input {
   padding: 1rem 2rem;
   margin: 0;
   text-decoration: none;
@@ -129,7 +131,6 @@ select {
   font-family: inherit;
   font-size: 1.6rem;
   cursor: pointer;
-  text-align: center;
   width: 100%;
 }
 

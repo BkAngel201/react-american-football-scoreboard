@@ -10,6 +10,9 @@ function App() {
   const [homeScore, setHomeScore] = useState(32)
   const [visitorScore, setVisitorScore] = useState(32)
   const [quarter, setQuarter] = useState(1)
+  const [down, setDown] = useState(3)
+  const [toGo, setToGo] = useState(7)
+  const [ballOn, setBallOn] = useState(21)
 
   const handler = (team, score) => {
     if(team === 'visitor') {
@@ -28,6 +31,9 @@ function App() {
         />
         <BottomRow 
           quarter={quarter}
+          down={down}
+          toGo={toGo}
+          ballOn={ballOn}
         />
       </section>
       <ButtonsRow 
@@ -35,6 +41,9 @@ function App() {
         visitorScore={visitorScore}
         scoreHandler={handler}
         setQuarter={setQuarter}
+        setDown={setDown}
+        setToGo={setToGo}
+        setBallOn={setBallOn}
       />
     </div>
   );

@@ -3,7 +3,7 @@ import "./App.css";
 
 const TopRow = (props) => {
     // variables Timer
-    const [minTimer, setMinTimer] = useState(4)
+    const [minTimer, setMinTimer] = useState('04')
     const [secTimer, setSecTimer] = useState('00')
     const [secondsCount, SetSecondsCount] = useState(0)
     const totalTimerSeconds = 240

@@ -22,6 +22,18 @@ const ButtonsRow = (props) => {
           <button className="awayButtons__touchdown" onClick={() => props.scoreHandler('visitor',7)}>Away Touchdown</button>
           <button className="awayButtons__fieldGoal" onClick={() => props.scoreHandler('visitor',3)}>Away Field Goal</button>
         </div>
+        <div className="inputField">
+          Down
+          <input type="text" onChange={(e)=> props.setDown(e.target.value)}/>
+        </div>
+        <div className="inputField">
+          To Go
+          <input type="text" onChange={(e)=> props.setToGo(e.target.value)}/>
+        </div>
+        <div className="inputField">
+          Ball On
+          <input type="text" onChange={(e)=> props.setBallOn(e.target.value)}/>
+        </div>
         <div className="quarterSelector">
           Quarter
           <select onChange={selectChange}>
