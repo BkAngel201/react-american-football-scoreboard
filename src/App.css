@@ -110,6 +110,28 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.homeButtons,
+.awayButtons {
+  width: 50%;
+}
+.quarterSelector,
+.inputField {
+  width:22%
+}
+select,
+input {
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #414141;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 100%;
 }
 
 .homeButtons__touchdown,
