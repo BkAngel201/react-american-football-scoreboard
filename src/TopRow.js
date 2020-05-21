@@ -11,20 +11,18 @@ const TopRow = (props) => {
         const timer = setInterval(() => {
             if(secondsCount !== 0 && secondsCount <= 240) {
                 if(secTimer == '00') {
-                    setMinTimer(minTimer - 1)
+                    setMinTimer(`0${minTimer - 1}`)
                     setSecTimer(59)
                 } else {
                     if(secTimer > 10) {
                         setSecTimer(secTimer-1)
                     } else {
                         setSecTimer(`0${secTimer-1}`)
-                    }
-                    
+                    } 
                 }
             }
             if(secondsCount <= totalTimerSeconds) {
                 SetSecondsCount(secondsCount + 1)
-                console.log(totalTimerSeconds,secondsCount);
             }
         }, 1000)
         return () => clearInterval(timer)
